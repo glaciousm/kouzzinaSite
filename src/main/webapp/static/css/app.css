@@ -3,8 +3,7 @@ html{
 }
 
 body{
-	height: 100%;
-	background-color:rgb(245, 245, 245);
+	background-color:#333;
 }
 
 
@@ -36,16 +35,9 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
 }
 
 .generic-container {
-  position:fixed;
-  width:80%;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #EAE7E7;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 0 30px black;
+  margin: 1%;
+  left: 1%;
+  right: 1%;
 }
 
 .custom-width {
@@ -81,6 +73,63 @@ body, #mainWrapper, .form-control{
     padding: 10%;
 }
 
-.authbar{
-	margin-bottom:15px;
+.header{
+	display: block;
+	background-color:#4c565c;
+}
+
+.header img {
+	width:100%;
+}
+
+.footer{
+	display: block;
+	color: white;
+	text-align: center;
+}
+
+.divContainer{
+	width: 80%;
+	padding-left:0.5%;
+	padding-top:0.5%;
+	padding-bottom:0.5%;
+	margin-left: 10%;
+	background-color: #4c565c;
+}
+
+.divBox{
+	display: inline-block;
+	margin: 1%;
+	width: 31%;
+	height: 47.5%;
+	background-color: yellow;
+}
+
+#firstBox{
+	width: 97.5%;
+	height: 47.5%;
+	margin: 1%;
+	background-color: white;
+}
+
+#firstBoxImgDiv{
+	display: inline-block;
+	width: 343px;
+	height: 343px;
+	margin: 1%;
+	background-color: black;
+}
+
+#firstBoxTextDiv{
+	display: inline-block;
+	width: 68%;
+	height: 343px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-right: 1%;
+	background-color: black;
+}
+
+.panel{
+	background-color: transparent;
 }
