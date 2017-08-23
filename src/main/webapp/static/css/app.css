@@ -3,7 +3,7 @@ html{
 }
 
 body{
-	background-color:#333;
+	background-color:#f2f2f2;
 }
 
 
@@ -38,6 +38,9 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
   margin: 1%;
   left: 1%;
   right: 1%;
+  margin-left: 20em;
+  margin-right: 20em;
+  vertical-align: center;
 }
 
 .custom-width {
@@ -88,48 +91,102 @@ body, #mainWrapper, .form-control{
 	text-align: center;
 }
 
+.btn-default{
+	height: 2.4em;
+}
+
+.input-group{
+	float:right;
+}
+
+.panel-default{
+	border: 0;
+	background-color: transparent;
+}
+
 .divContainer{
-	width: 80%;
-	padding-left:0.5%;
-	padding-top:0.5%;
-	padding-bottom:0.5%;
-	margin-left: 10%;
-	background-color: #4c565c;
+	background-color: transparent;
 }
 
 .divBox{
-	display: inline-block;
-	margin: 1%;
-	width: 31%;
-	height: 47.5%;
-	background-color: yellow;
-}
-
-#firstBox{
-	width: 97.5%;
-	height: 47.5%;
-	margin: 1%;
+	box-shadow: 2px 2px 2px;
 	background-color: white;
+	vertical-align: top;
+	display:inline-block;
+	width: 28.35em;
+	height: 31em;
+	margin: 1em;
 }
 
-#firstBoxImgDiv{
+.divBoxImage {
+	text-align: center;
+	height: 19.7em;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divBoxImage img {
+	padding-bottom: 1em;
+	height: inherit;
+}
+
+.divBoxText{
+	vertical-align: middle;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	position: relative;
+	margin-left: 0.35em;
+	margin-top: 0.35em;
+	width: 27.5em;
+	height: 3em;
+}
+
+.divBoxTextDesc{
+	font-style: italic;
+	overflow: hidden;
+	vertical-align: middle;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	position: relative;
+	margin-left: 0.35em;
+	margin-top: 0.35em;
+	width: 27.5em;
+	height: 4em;
+	font-family: Roboto;
+}
+
+
+.divBoxText span {
+	font-family: Roboto;
+	font-size: 1.65rem;
+	position: relative;
 	display: inline-block;
-	width: 343px;
-	height: 343px;
-	margin: 1%;
-	background-color: black;
+	vertical-align: middle;
+	font-weight: bold;
 }
 
-#firstBoxTextDiv{
+.divBoxIcons{
+	margin-left: 0.35em;
+	margin-top: 0.35em;
+	width: 25.5em;
+	height: 2.7em;
+}
+
+.calendar{
+	color: #e0e0e0;
 	display: inline-block;
-	width: 68%;
-	height: 343px;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	margin-right: 1%;
-	background-color: black;
+	padding-top: 1em;
 }
 
-.panel{
-	background-color: transparent;
+.rating{
+	display: inline-block;
+	margin-left: 11em;
+}
+
+.fa-cutlery{
+	margin-left: 0.5em;
+	color: #e0e0e0;
 }
