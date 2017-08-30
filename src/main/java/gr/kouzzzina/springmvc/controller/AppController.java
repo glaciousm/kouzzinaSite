@@ -1,24 +1,32 @@
 package gr.kouzzzina.springmvc.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.security.authentication.AuthenticationTrustResolver;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import gr.kouzzzina.springmvc.service.UserProfileService;
-import gr.kouzzzina.springmvc.service.UserService;
+import gr.kouzzzina.springmvc.model.Recipe;
+import gr.kouzzzina.springmvc.model.RecipeTable;
+import gr.kouzzzina.springmvc.service.RecipeService;
+import gr.kouzzzina.springmvc.service.RecipeTableService;
 
 
 
 @Controller
 @RequestMapping("/")
 public class AppController {
-
+	
 	@Autowired
+	RecipeService recipeService;
+	
+	@Autowired
+	RecipeTableService recipeTableService;
+
+	/*@Autowired
 	UserService userService;
 	
 	@Autowired
@@ -31,19 +39,26 @@ public class AppController {
 	PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
 	
 	@Autowired
-	AuthenticationTrustResolver authenticationTrustResolver;
+	AuthenticationTrustResolver authenticationTrustResolver;*/
 	
 	
 	/**
 	 * This method will list all existing users.
 	 */
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/home"}, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
-
-		/*List<User> users = userService.findAllUsers();
-		model.addAttribute("users", users);
-		model.addAttribute("loggedinuser", getPrincipal());*/
+		List<Recipe> recipes = recipeService.list();
+		model.addAttribute("recipes", recipes);
 		return "main";
+	}
+	
+	@RequestMapping(value = { "/recipe-{id}" }, method = RequestMethod.GET)
+	public String showRecipe(@PathVariable int id, ModelMap model) {
+		Recipe recipe = recipeService.findById(id);
+		List<RecipeTable> incredients = recipeTableService.findByRecipeId(id);
+		model.addAttribute("recipe", recipe);
+		model.addAttribute("incredients", incredients);
+		return "recipe";
 	}
 
 	/**

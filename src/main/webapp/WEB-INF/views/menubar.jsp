@@ -11,7 +11,7 @@
         </div>
         <div class="collapse navbar-collapse" id="MainMenu">
             <ul class="nav navbar-nav menu-list">
-            <li class="active"><a href="#">Αρχική</a></li>
+            <li class="active"><a href="<c:url value='/home'/>">Αρχική</a></li>
                 <li class="dropdown list-category">
                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-navicon"></i> Ορεκτικά <i class="fa fa-angle-down" aria-hidden="true"></i>
